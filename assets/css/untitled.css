@@ -1,0 +1,13 @@
+.btn {
+}
+
+.nav-link:hover {
+  color: var(--bs-primary-text-emphasis);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#login-btn:hover {
+  box-shadow: var(--bs-light-text-emphasis);
+}
+
