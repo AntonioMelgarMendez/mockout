@@ -5,42 +5,54 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Features - Brand</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css?h=91180125d193e45e653b99b7314045c4">
-    <link rel="stylesheet" href="assets/css/Raleway.css?h=bb42d4c0de18b97973cbfbed19d83c8d">
-    <link rel="stylesheet" href="assets/css/bs-theme-overrides.css?h=c9c8e1c21a4dc02a897436fa55aadd71">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <link rel="stylesheet" href="assets/css/Features-Centered-Icons-icons.css?h=f532ca0ecafd24606923f82d073e515a">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/Raleway.css">
+    <link rel="stylesheet" href="assets/css/bs-theme-overrides.css">
+    <link rel="stylesheet" href="assets/css/aos.min.css">
+    <link rel="stylesheet" href="assets/css/Features-Centered-Icons-icons.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css">
-    <link rel="stylesheet" href="assets/css/Login-with-overlay-image.css?h=22499ec702aa86f2b223837233dc4445">
-    <link rel="stylesheet" href="assets/css/Ludens-Users---1-Login.css?h=62edfac2210d8e9b78b80028a6186cda">
-    <link rel="stylesheet" href="assets/css/Profile-Edit-Form-styles.css?h=941c84e96020d5a5b03f80619fed6ea9">
-    <link rel="stylesheet" href="assets/css/Profile-Edit-Form.css?h=5ecb76a1061fdd34dcc451bc4075f02d">
-    <link rel="stylesheet" href="assets/css/Team.css?h=0541020b94dcda2653d84eca1011248c">
-    <link rel="stylesheet" href="assets/css/untitled.css?h=390432172c021391b110fb3d188b5f49">
+    <link rel="stylesheet" href="assets/css/Login-with-overlay-image.css">
+    <link rel="stylesheet" href="assets/css/Ludens-Users---1-Login.css">
+    <link rel="stylesheet" href="assets/css/Profile-Edit-Form-styles.css">
+    <link rel="stylesheet" href="assets/css/Profile-Edit-Form.css">
+    <link rel="stylesheet" href="assets/css/Team.css">
+    <link rel="stylesheet" href="assets/css/untitled.css">
+    <link rel="stylesheet" href="assets/css/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/css/bs-theme-overrides.css">
+    <link rel="stylesheet" href="assets/css/css/Features-Centered-Icons-icons.css">
+    <link rel="stylesheet" href="assets/css/css/Login-with-overlay-image.css">
+    <link rel="stylesheet" href="assets/css/css/Ludens-Users---1-Login.css">
+    <link rel="stylesheet" href="assets/css/css/Profile-Edit-Form-styles.css">
+    <link rel="stylesheet" href="assets/css/css/Profile-Edit-Form.css">
+    <link rel="stylesheet" href="assets/css/css/Team.css">
+    <link rel="stylesheet" href="assets/css/Bootstrap-Cards-v2.css">
+    <link rel="stylesheet" href="assets/css/Ludens-Client---Login-Dropdown.css">
 </head>
 
 <body>
     <header class="pt-5">
-        <!-- Start: Navbar Centered Links -->
         <nav class="navbar navbar-expand-md fixed-top bg-body py-3">
-            <div class="container"><a class="navbar-brand d-flex align-items-center" href="#"><span><img src="assets/img/LogoQuizzLab.png?h=eb1a60fccca9cc85cb7cf3c3ad77fbfa" style="width: 45px;height: 52px;"><strong>&nbsp; QuizzLab</strong></span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-3"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navcol-3" style="text-align: center;">
+            <div class="container"><a class="navbar-brand d-flex align-items-center" href="#"><span class="text-primary"><img id="logoFinal-1" src="assets/img/LogoQuizzLab.png" style="width:45px;height:52px;"><strong>&nbsp; QuizzLab</strong></span></a><button data-bs-toggle="collapse" data-bs-target="#navcol-3" class="navbar-toggler"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navcol-1" style="text-align:center;">
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="features.html">Features</a></li>
+                        <li class="nav-item"><a class="nav-link" href="features.html">Features</a></li>
                         <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
-                        <li class="nav-item"><a class="nav-link" href="integrations.html">Playground</a></li>
-                        <li class="nav-item"><a class="nav-link" href="untitled.html">About Us</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contacts.html">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="integrations.html" id="playgroundnavbar">Playground</a></li>
+                        <li class="nav-item"></li>
+                        <li class="nav-item"><a class="nav-link" href="untitled.html" id="aboutUs">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contacts.html" id="contactnav">Contact</a></li>
+                        <li class="nav-item dropdown"><a class="nav-link text-center d-md-flex align-items-md-center dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" href="#" id="navbar-responsive">More</a>
+                            <div class="dropdown-menu" style="width:50px;"><a class="dropdown-item" href="untitled.html">About us</a><a class="dropdown-item" href="integrations.html">Playground</a><a class="dropdown-item" href="contacts.html">Contact</a></div>
+                        </li>
                     </ul>
-                    <div class="row" style="text-align: center;">
-                        <div class="col"><a class="btn btn-primary border-0" role="button" style="border-radius: 1.5em;box-shadow: 0px 0px 7px 3px lightgray;margin: 0.5em;border-width: 0.25em;border-color: var(--bs-btn-hover-border-color);" href="untitled-3.html">SignUp</a></div>
-                        <div class="col"><a class="btn btn-primary link-primary bg-light border rounded-pill border-2 shadow" role="button" id="login-btn" href="untitled-4.html" style="margin-right: 12px;margin-top: 6px;">Log in</a></div>
+                    <div class="row" style="text-align:center;">
+                        <div class="col"><a class="btn btn-primary nav-button" role="button" href="untitled-3.html">SignUp</a></div>
+                        <div class="col"><a class="btn btn-primary nav-button" role="button" href="untitled-4.html" style="background:white;color:#07367b;border:2px solid gray;">LogIn</a></div>
                     </div>
                 </div>
             </div>
-        </nav><!-- End: Navbar Centered Links -->
+        </nav>
     </header><!-- Start: Hero With Brands -->
     <section class="py-5 mt-5">
         <!-- Start: Hero Clean Reverse -->
@@ -48,12 +60,12 @@
             <div class="row gy-4 gy-md-0" data-aos="fade" data-aos-duration="950">
                 <div class="col-md-6 text-center text-md-start d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center">
                     <div style="max-width: 350px;">
-                        <h1 class="display-6 fw-bold mb-4">Everything you need in one&nbsp;<span class="underline">platform</span>.</h1>
+                        <h1 class="display-6 fw-bold mb-4">Everything you need in one&nbsp;<span class="underline pb-3">platform</span>.</h1>
                         <p class="my-4">Build your own knowledge, be the leader of your future and develop knowledge for life.</p>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div><img class="rounded img-fluid w-100 fit-cover" style="min-height: 300px;" src="assets/img/illustrations/biro-blue-laptop-with-a-browser-window-where-online-learning-takes-place-1.png?h=d2ac409e478ddf9f7fd028a92f198f65"></div>
+                    <div><img class="rounded img-fluid w-100 fit-cover" style="min-height: 300px;" src="assets/img/illustrations/biro-blue-laptop-with-a-browser-window-where-online-learning-takes-place-1.png"></div>
                 </div>
             </div>
             <div class="text-center mt-5"><a href="#"> </a><a href="#"> </a></div>
@@ -62,7 +74,7 @@
         <div class="container py-4 py-xl-5" data-aos="fade" data-aos-duration="950" style="padding-top: 6px;margin-top: -48px;margin-bottom: -82px;">
             <div class="row mb-5">
                 <div class="col" style="margin-top: -44px;margin-bottom: -30px;">
-                    <h3 class="display-6 fw-bold text-center pb-4 mb-4">All our possible&nbsp;<span class="underline">combinations</span></h3>
+                    <h3 class="display-6 fw-bold text-center pb-4 mb-4">All our possible&nbsp;<span class="underline pb-3">combinations</span></h3>
                 </div>
             </div>
             <div class="row gy-4 row-cols-2 row-cols-md-4" style="padding-top: 0px;">
@@ -111,15 +123,12 @@
                     </div>
                 </div>
             </div>
-            <h3 class="display-6 fw-bold text-center pb-4 mb-4" style="padding-top: 0px;margin-top: 36px;">Our components at your&nbsp;<span class="underline">service</span></h3>
         </div><!-- End: Features Centered Icons -->
         <!-- Start: Cool Lightbox with Gallery -->
         <div class="container" style="text-align: center;">
             <div class="row" data-aos="fade" data-aos-duration="950" style="margin-top: 26px;">
-                <div class="col-md-3"><a href="https://lipsum.app/id/80/1600x1200" data-fancybox="gallery"><img data-bss-hover-animate="bounce" class="img-fluid" src="assets/img/icons8-resistor-240.png?h=488838e96c0c24e1583c6c8d91312b30" width="182" height="182"></a></div>
-                <div class="col-md-3"><a href="https://lipsum.app/id/84/1600x1200" data-fancybox="gallery"><img data-bss-hover-animate="bounce" id="element" class="img-fluid" src="assets/img/icons8-battery-240.png?h=ecf03c2ceb0e2f64b73d00db77c00bbc" width="182"></a></div>
-                <div class="col-md-3"><a href="https://lipsum.app/id/86/1600x1200" data-fancybox="gallery"><img data-bss-hover-animate="bounce" class="img-fluid" src="assets/img/icons8-capacitor-240.png?h=e75b64e179fe6c72728c2125ef4530ef" width="182"></a></div>
-                <div class="col-md-3"><a href="https://lipsum.app/id/87/1600x1200" data-fancybox="gallery"><img data-bss-hover-animate="bounce" class="img-fluid" src="assets/img/icons8-voltmeter-240.png?h=162c8c9504a8b91dde06ce738591c929" width="182"></a></div>
+                <div class="col-md-3"><a href="https://lipsum.app/id/84/1600x1200" data-fancybox="gallery"></a></div>
+                <div class="col-md-3"><a href="https://lipsum.app/id/87/1600x1200" data-fancybox="gallery"></a></div>
             </div>
         </div><!-- End: Cool Lightbox with Gallery -->
     </section><!-- End: Hero With Brands -->
@@ -129,12 +138,12 @@
             <div class="row gy-4 gy-md-0" data-aos="fade" data-aos-duration="950" style="margin-top: 118px;">
                 <div class="col-md-6 text-center text-md-start d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center">
                     <div style="max-width: 350px;">
-                        <h1 class="display-6 fw-bold mb-4">Amazing and detailed animations of your&nbsp;<span class="underline">circuits</span>.</h1>
+                        <h1 class="display-6 fw-bold mb-4">Amazing and detailed animations of your&nbsp;<span class="pb-3 underline">circuits</span>.</h1>
                         <p class="my-4">We create amazing animations to facilitate your knowledge with amazing data tables. </p>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div><img class="rounded img-fluid w-100 fit-cover" style="min-height: 300px;" src="assets/img/illustrations/isometric-idea-for-business-success-and-project-management.gif?h=dd895735b69d578b04fe39b6b54bc40d"></div>
+                    <div><img class="rounded img-fluid w-100 fit-cover" style="min-height: 300px;" src="assets/img/illustrations/isometric-idea-for-business-success-and-project-management.gif"></div>
                 </div>
             </div>
             <div class="text-center mt-5"><a href="#"> </a><a href="#"> </a></div>
@@ -157,7 +166,7 @@
             </div>
         </section><!-- End: Newsletter Subscription Clean -->
     </section><!-- Start: Footer Multi Column -->
-    <footer>
+    <footer style="padding: 2rem;">
         <div class="container py-4 py-lg-5">
             <div class="row row-cols-2 row-cols-md-4 mx-auto">
                 <!-- Start: Social Icons -->
@@ -201,12 +210,14 @@
             </div>
         </div>
     </footer><!-- End: Footer Multi Column -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="assets/js/bs-init.js?h=67ee20cf4e5150919853fca3720bbf0d"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/aos.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
-    <script src="assets/js/Profile-Edit-Form-profile.js?h=36f16d72db7b5e137e5f6f74a6f95a32"></script>
-    <script src="assets/js/startup-modern.js?h=860a1ecddc64fd24c02f2fc109343dbd"></script>
+    <script src="assets/js/Profile-Edit-Form-profile.js"></script>
+    <script src="assets/js/startup-modern.js"></script>
+    <script src="assets/js/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/js/bs-init.js"></script>
 </body>
 
 </html>

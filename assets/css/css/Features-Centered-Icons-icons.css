@@ -61,15 +61,21 @@
 #mainNav {
 }
 
-@media (max-width: 768px) {
-  .dropdown {
-    display: block;
+@media (min-width: 576px) and (max-width: 768px) {
+  #aboutUs {
+    display: none;
   }
 }
 
-@media (min-width: 769px) {
-  .dropdown {
-    display: block;
+@media (min-width: 576px) and (max-width: 768px) {
+  #playgroundnavbar {
+    display: none;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  #contactnav {
+    display: none;
   }
 }
 
@@ -201,61 +207,57 @@ img-fluid:hover {
   /*height: 50vh;*/
 }
 
-input {
+.template:hover {
+  transform: scale(1.1);
 }
 
-input {
-  /*border-radius: kmd;*/
+@media (min-width: 768px) {
+  .template {
+    width: 20vw;
+  }
 }
 
-input {
-  border-radius: 1rem !important;
+@media (max-width: 768px) {
+  .item-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
-#date {
-  border-radius: 0px;
+@media (max-width: 768px) {
+  .item-container > div > img {
+    transition: 0.5s;
+  }
 }
 
-#date {
-  border-radius: 0rem !important;
+@media (max-width: 768px) {
+  .item-container > div > img:hover {
+    transform: scale(1.1);
+  }
 }
 
-#phone {
-  border-radius: 0rem !important;
+@media (min-width: 768px) {
+  .item-container {
+    flex-direction: column;
+  }
 }
 
-#name {
-  border-radius: 0rem !important;
+.item-container > div > img {
+  width: 20vw;
 }
 
-input {
+@media (min-width: 768px) {
+  .item-container > div > img:hover {
+    transform: scale(1.1);
+  }
 }
 
-#lastname {
-  border-radius: 0rem !important;
-}
-
-#passwordlogin {
-  border-radius: 1rem !important;
-}
-
-#emaillogin {
-  border-radius: 1rem !important;
-}
-
-#email {
-  border-radius: 1rem !important;
-}
-
-#user {
-  border-radius: 1rem !important;
-}
-
-#password {
-  border-radius: 1rem !important;
-}
-
-#passwordDefault {
-  border-radius: 0px !important;
+@media (min-width: 768px) {
+  .item-container > div > img {
+    width: 11.25vw;
+    transition: 0.5s;
+  }
 }
 

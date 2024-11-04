@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>final_final (1)</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/Raleway.css">
+    <link rel="stylesheet" href="assets/css/bs-theme-overrides.css">
+    <link rel="stylesheet" href="assets/css/Features-Centered-Icons-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css">
+    <link rel="stylesheet" href="assets/css/Login-with-overlay-image.css">
+    <link rel="stylesheet" href="assets/css/Ludens-Users---1-Login.css">
+    <link rel="stylesheet" href="assets/css/Profile-Edit-Form-styles.css">
+    <link rel="stylesheet" href="assets/css/Profile-Edit-Form.css">
+    <link rel="stylesheet" href="assets/css/Team.css">
+    <link rel="stylesheet" href="assets/css/untitled.css">
+    <link rel="stylesheet" href="assets/css/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/css/bs-theme-overrides.css">
+    <link rel="stylesheet" href="assets/css/css/Features-Centered-Icons-icons.css">
+    <link rel="stylesheet" href="assets/css/css/Login-with-overlay-image.css">
+    <link rel="stylesheet" href="assets/css/css/Ludens-Users---1-Login.css">
+    <link rel="stylesheet" href="assets/css/css/Profile-Edit-Form-styles.css">
+    <link rel="stylesheet" href="assets/css/css/Profile-Edit-Form.css">
+    <link rel="stylesheet" href="assets/css/css/Team.css">
+    <link rel="stylesheet" href="assets/css/Bootstrap-Cards-v2.css">
+    <link rel="stylesheet" href="assets/css/Ludens-Client---Login-Dropdown.css">
+</head>
+
+<body>
+    <header class="pt-5">
+        <!-- Start: Navbar Centered Links -->
+        <nav class="navbar navbar-expand-md fixed-top bg-body py-3">
+            <div class="container"><a class="navbar-brand d-flex align-items-center" href="#"><span class="text-primary"><img id="logoFinal" src="assets/img/LogoQuizzLab.png" style="width: 45px;height: 52px;"><strong>&nbsp; QuizzLab</strong></span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-3"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navcol-3" style="text-align: center;">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="features.html">Features</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                        <li class="nav-item"><a class="nav-link" href="integrations.html">Playground</a></li>
+                        <li class="nav-item"><a class="nav-link" href="untitled.html">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contacts.html">Contact</a></li>
+                    </ul>
+                    <div class="row" style="text-align: center;">
+                        <div class="col"><a class="btn btn-primary border-0" role="button" style="border-radius: 1.5em;box-shadow: 0px 0px 7px 3px lightgray;margin: 0.5em;border-width: 0.25em;border-color: var(--bs-btn-hover-border-color);" href="signUp.html">SignUp</a></div>
+                        <div class="col"><a class="btn btn-primary link-primary bg-light border rounded-pill border-2 shadow" role="button" id="login-btn" href="logIn.html" style="margin-right: 12px;margin-top: 6px;">Log in</a></div>
+                    </div>
+                </div>
+            </div>
+        </nav><!-- End: Navbar Centered Links -->
+    </header>
+    <div class="row">
+        <div class="col">
+            <!-- Start: Profile Edit Form -->
+            <div class="container profile profile-view" id="profile" style="margin-top: 40px;">
+                <form>
+                    <div class="row profile-row">
+                        <div class="col-md-4 relative" style="display: flex;flex-direction: column;align-items: center;/*justify-content: center;*/">
+                            <div class="avatar">
+                                <div class="placeholder avatar-bg center"></div>
+                            </div><!-- Start: uploads file with live preview -->
+                            <div class="text-center mb-3"><input class="form-control d-none" type="file" id="upload_trigger_btn" onchange="readURL(this)"><button class="btn btn-primary btn-sm fw-semibold link-light border rounded-pill" type="button" style="margin-top: 1em;font-size: 1.2rem;">Change Photo</button></div><!-- End: uploads file with live preview -->
+                        </div>
+                        <div class="col-md-8">
+                            <h1 class="fs-1 fw-semibold text-primary" style="margin-bottom: 30px;"><span class="underline pb-3" style="font-size: 2.5rem;">Platform</span></h1>
+                            <div class="row">
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-group mb-3"><label class="form-label">Firstname </label><input class="border rounded-pill form-control" type="text" id="name" name="firstname"></div>
+                                </div>
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-group mb-3"><label class="form-label">Lastname </label><input class="form-control" type="text" id="lastname" name="lastname"></div>
+                                </div>
+                            </div>
+                            <div class="form-group mb-3"><label class="form-label">Birthday</label><input class="border rounded-pill form-control" id="date" type="date" min="1976"></div>
+                            <div class="form-group mb-3"><label class="form-label">Phone</label><input class="form-control" type="tel" id="phone"></div>
+                            <div class="row">
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-group mb-3"><label class="form-label">Password </label><input class="form-control" type="password" name="password" autocomplete="off" required="" style="border-radius: 0 !important;"></div>
+                                </div>
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-group mb-3"><label class="form-label">Confirm Password</label><input class="border rounded form-control" type="password" name="confirmpass" autocomplete="off" required="" style="border-radius: 0 !important;"></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 content-right" style="display: flex;flex-direction: row;align-items: center;justify-content: center;margin-top: 5px;"><button class="btn btn-warning btn-lg border rounded-pill form-btn" type="reset" style="font-size: 1rem;border-radius: 0 !important;">CANCEL </button><button class="btn btn-primary btn-lg border rounded-pill form-btn" type="submit" style="font-size: 1rem;border-radius: 0 !important;">SAVE </button></div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div><!-- End: Profile Edit Form -->
+        </div>
+    </div>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <script src="assets/js/Profile-Edit-Form-profile.js"></script>
+    <script src="assets/js/startup-modern.js"></script>
+    <script src="assets/js/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/js/bs-init.js"></script>
+</body>
+
+</html>

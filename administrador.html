@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>final_final (1)</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/Raleway.css">
+    <link rel="stylesheet" href="assets/css/bs-theme-overrides.css">
+    <link rel="stylesheet" href="assets/css/aos.min.css">
+    <link rel="stylesheet" href="assets/css/Features-Centered-Icons-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css">
+    <link rel="stylesheet" href="assets/css/Login-with-overlay-image.css">
+    <link rel="stylesheet" href="assets/css/Ludens-Users---1-Login.css">
+    <link rel="stylesheet" href="assets/css/Profile-Edit-Form-styles.css">
+    <link rel="stylesheet" href="assets/css/Profile-Edit-Form.css">
+    <link rel="stylesheet" href="assets/css/Team.css">
+    <link rel="stylesheet" href="assets/css/untitled.css">
+    <link rel="stylesheet" href="assets/css/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/css/bs-theme-overrides.css">
+    <link rel="stylesheet" href="assets/css/css/Features-Centered-Icons-icons.css">
+    <link rel="stylesheet" href="assets/css/css/Login-with-overlay-image.css">
+    <link rel="stylesheet" href="assets/css/css/Ludens-Users---1-Login.css">
+    <link rel="stylesheet" href="assets/css/css/Profile-Edit-Form-styles.css">
+    <link rel="stylesheet" href="assets/css/css/Profile-Edit-Form.css">
+    <link rel="stylesheet" href="assets/css/css/Team.css">
+    <link rel="stylesheet" href="assets/css/Bootstrap-Cards-v2.css">
+    <link rel="stylesheet" href="assets/css/Ludens-Client---Login-Dropdown.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md fixed-top bg-body shadow-sm d-sm-flex justify-content-between py-3">
+        <div class="container"><a class="navbar-brand d-flex align-items-center" href="index.html"><span class="text-primary"><img id="logoFinal" src="assets/img/LogoQuizzLab.png" style="width:45px;height:52px;"><strong>&nbsp; QuizzLab</strong></span></a><button data-bs-toggle="collapse" data-bs-target="#navcol-3" class="navbar-toggler"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-3" style="text-align:center;">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="integrations.html">My Circuits</a></li>
+                    <li class="nav-item"><a class="nav-link" href="untitled.html">Explore</a></li>
+                    <li class="nav-item"><a class="nav-link" href="administrador.html">Users</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="circuitsAdmin.html">Circuits</a></li>
+                </ul>
+                <div class="d-sm-flex flex-column flex-grow-0 align-items-center profile-container">
+                    <div class="d-flex justify-content-center dropdown" id="dropdownperfil"><a aria-expanded="false" class="dropdown-toggle" data-bs-toggle="dropdown" href="#"><img class="rounded-circle img-fluid border rounded-0" height="50" src="assets/img/daniel.jpg" style="height:50px;width:48px;" width="45"></a>
+                        <div class="dropdown-menu dropdown-menu-end"><a class="dropdown-item" href="untitled-5.html">My profile</a><a class="dropdown-item" href="#"></a><li class="dropdown-submenu"><a class="dropdown-item" href="#">
+            </a><a class="dropdown-item dropdown-toggle" href="#">Language</a>
+            <ul class="dropdown-menu" style="margin-top:3.5em;">
+                <li><a class="dropdown-item" href="#">Spanish ES</a></li>
+                <li><a class="dropdown-item" href="#">English EN</a></li>
+            </ul>
+        </li><a class="dropdown-item" href="#"></a><li class="dropdown-submenu"><a class="dropdown-item" href="#">
+            </a><a class="dropdown-item dropdown-toggle" href="#">Themes</a>
+            <ul class="dropdown-menu" style="margin-top:6.5em;">
+                <li><a class="dropdown-item" href="#">Dark</a></li>
+                <li><a class="dropdown-item" href="#">Light</a></li>
+            </ul>
+        </li><script>
+        function setTheme(theme) {
+            document.documentElement.setAttribute('data-bs-theme', theme);
+        }
+    </script><a class="link-danger dropdown-item" href="index.html">Log out&nbsp;</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav><!-- Start: Hero Clean Reverse -->
+    <div class="container py-4 py-xl-5" style="margin-bottom: -46px;padding-top: 0px;margin-top: 90px;">
+        <div class="row gy-4 gy-md-0" data-aos="fade" data-aos-duration="950">
+            <div class="col-md-6">
+                <div></div>
+            </div>
+        </div>
+        <div class="text-center mt-5"><a href="#"> </a><a href="#"> </a></div>
+        <div class="col-xxl-12" style="margin-top: -44px;margin-bottom: -30px;">
+            <h3 class="display-6 fw-bold text-center pb-4 mb-4">Administrator&nbsp;<span class="underline pb-3">Users</span></h3>
+        </div><div class="container my-4">
+ 
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Last Name</th>
+                <th>Birthday</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Rol</th>
+                <th>Profile Pic</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="userTableBody">
+            <!-- Filas de usuario se agregarán aquí con JavaScript -->
+        </tbody>
+    </table>
+    <button class="btn btn-primary" onclick="addUser()">Add New User</button>
+</div>
+
+<script>
+    // Usuarios de ejemplo
+let users = [
+    { 
+        id: 1, 
+        name: "Juan", 
+        lastName: "Perez", 
+        birthday: "1990-01-15", 
+        phone: "1234567890", 
+        email: "juan.perez@example.com", 
+        role: "admin", 
+        profilePic: `https://robohash.org/${encodeURIComponent("juan.perez@example.com")}`
+    },
+    { 
+        id: 2, 
+        name: "Maria", 
+        lastName: "Gomez", 
+        birthday: "1985-05-10", 
+        phone: "0987654321", 
+        email: "maria.gomez@example.com", 
+        role: "user", 
+        profilePic: `https://robohash.org/${encodeURIComponent("maria.gomez@example.com")}`
+    },
+    { 
+        id: 3, 
+        name: "Carlos", 
+        lastName: "Rivera", 
+        birthday: "1992-03-08", 
+        phone: "5551234567", 
+        email: "carlos.rivera@example.com", 
+        role: "user", 
+        profilePic: `https://robohash.org/${encodeURIComponent("carlos.rivera@example.com")}`
+    }
+];
+
+
+    // Función para renderizar la tabla
+    function renderTable() {
+        const userTableBody = document.getElementById("userTableBody");
+        userTableBody.innerHTML = ""; // Limpiar tabla
+
+        users.forEach(user => {
+            const row = document.createElement("tr");
+
+            row.innerHTML = `
+                <td>${user.id}</td>
+                <td>${user.name}</td>
+                <td>${user.lastName}</td>
+                <td>${user.birthday}</td>
+                <td>${user.phone}</td>
+                <td>${user.email}</td>
+                <td>${user.role}</td>
+                <td><img src="${user.profilePic}" alt="Profile Pic" width="50" height="50"></td>
+                <td>
+                    <button class="btn border rounded-pill btn-warning" onclick="editUser(${user.id})">Edit</button>
+                    <button class="btn border rounded-pill btn-primary" onclick="deleteUser(${user.id})">Delete</button>
+                </td>
+            `;
+            userTableBody.appendChild(row);
+        });
+    }
+
+    // Función para agregar un usuario
+    function addUser() {
+        const name = prompt("Enter user's first name:");
+        const lastName = prompt("Enter user's last name:");
+        const birthday = prompt("Enter user's birthday (YYYY-MM-DD):");
+        const phone = prompt("Enter user's phone number:");
+        const email = prompt("Enter user's email:");
+        const role = prompt("Enter user's role (admin/user):");
+        const profilePic = prompt("Enter user's profile pic URL (optional):") || "https://via.placeholder.com/50";
+
+        if (name && lastName && birthday && phone && email && role) {
+            const newUser = {
+                id: users.length + 1,
+                name,
+                lastName,
+                birthday,
+                phone,
+                email,
+                role,
+                profilePic
+            };
+            users.push(newUser);
+            renderTable();
+        }
+    }
+
+    // Función para editar un usuario
+    function editUser(userId) {
+        const user = users.find(u => u.id === userId);
+        if (user) {
+            const newName = prompt("Enter new first name:", user.name);
+            const newLastName = prompt("Enter new last name:", user.lastName);
+            const newBirthday = prompt("Enter new birthday (YYYY-MM-DD):", user.birthday);
+            const newPhone = prompt("Enter new phone number:", user.phone);
+            const newEmail = prompt("Enter new email:", user.email);
+            const newRole = prompt("Enter new role (admin/user):", user.role);
+            const newProfilePic = prompt("Enter new profile pic URL:", user.profilePic);
+
+            if (newName && newLastName && newBirthday && newPhone && newEmail && newRole) {
+                user.name = newName;
+                user.lastName = newLastName;
+                user.birthday = newBirthday;
+                user.phone = newPhone;
+                user.email = newEmail;
+                user.role = newRole;
+                user.profilePic = newProfilePic;
+                renderTable();
+            }
+        }
+    }
+
+    // Función para eliminar un usuario
+    function deleteUser(userId) {
+        users = users.filter(u => u.id !== userId);
+        renderTable();
+    }
+
+    // Llenar la tabla con los datos iniciales
+    document.addEventListener("DOMContentLoaded", renderTable);
+</script>
+
+    </div><!-- End: Hero Clean Reverse -->
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/aos.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <script src="assets/js/Profile-Edit-Form-profile.js"></script>
+    <script src="assets/js/startup-modern.js"></script>
+    <script src="assets/js/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/js/bs-init.js"></script>
+</body>
+
+</html>

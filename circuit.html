@@ -4,77 +4,354 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Testimonials - Brand</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css?h=91180125d193e45e653b99b7314045c4">
-    <link rel="stylesheet" href="assets/css/Raleway.css?h=bb42d4c0de18b97973cbfbed19d83c8d">
-    <link rel="stylesheet" href="assets/css/bs-theme-overrides.css?h=c9c8e1c21a4dc02a897436fa55aadd71">
-    <link rel="stylesheet" href="assets/css/Features-Centered-Icons-icons.css?h=f532ca0ecafd24606923f82d073e515a">
+    <title>circuits</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/Raleway.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/bs-theme-overrides.css">
+    <link rel="stylesheet" href="assets/css/Features-Centered-Icons-icons.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css">
-    <link rel="stylesheet" href="assets/css/Login-with-overlay-image.css?h=22499ec702aa86f2b223837233dc4445">
-    <link rel="stylesheet" href="assets/css/Ludens-Users---1-Login.css?h=62edfac2210d8e9b78b80028a6186cda">
-    <link rel="stylesheet" href="assets/css/Profile-Edit-Form-styles.css?h=941c84e96020d5a5b03f80619fed6ea9">
-    <link rel="stylesheet" href="assets/css/Profile-Edit-Form.css?h=5ecb76a1061fdd34dcc451bc4075f02d">
-    <link rel="stylesheet" href="assets/css/Team.css?h=0541020b94dcda2653d84eca1011248c">
-    <link rel="stylesheet" href="assets/css/untitled.css?h=390432172c021391b110fb3d188b5f49">
+    <link rel="stylesheet" href="assets/css/Login-with-overlay-image.css">
+    <link rel="stylesheet" href="assets/css/Ludens-Users---1-Login.css">
+    <link rel="stylesheet" href="assets/css/Profile-Edit-Form-styles.css">
+    <link rel="stylesheet" href="assets/css/Profile-Edit-Form.css">
+    <link rel="stylesheet" href="assets/css/Team.css">
+    <link rel="stylesheet" href="assets/css/untitled.css">
+    <link rel="stylesheet" href="assets/css/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/css/bs-theme-overrides.css">
+    <link rel="stylesheet" href="assets/css/css/Features-Centered-Icons-icons.css">
+    <link rel="stylesheet" href="assets/css/css/Login-with-overlay-image.css">
+    <link rel="stylesheet" href="assets/css/css/Ludens-Users---1-Login.css">
+    <link rel="stylesheet" href="assets/css/css/Profile-Edit-Form-styles.css">
+    <link rel="stylesheet" href="assets/css/css/Profile-Edit-Form.css">
+    <link rel="stylesheet" href="assets/css/css/Team.css">
+    <link rel="stylesheet" href="assets/css/Bootstrap-Cards-v2.css">
+    <link rel="stylesheet" href="assets/css/Ludens-Client---Login-Dropdown.css">
 </head>
 
-<body>
-    <nav class="navbar navbar-expand-md bg-body py-3" style="text-align: center;">
-        <div class="container"><img src="assets/img/LogoQuizzLab.png?h=eb1a60fccca9cc85cb7cf3c3ad77fbfa" style="width: 45px;height: 50px;"><a class="navbar-brand d-flex align-items-center" href="#"><span>Circuits</span></a><button data-bs-toggle="collapse" data-bs-target="#navcol-2" class="navbar-toggler"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navcol-2">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link" href="#">Save</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Save As</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Load</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Delete</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Share</a></li>
-                </ul><button class="btn btn-primary" style="background:var(--bs-secondary);border-color:var(--bs-secondary);border-radius:0.5em;" type="button">Run Circuit</button>
-            </div>
+<body><style>
+        h5 {
+            text-align: center;
+            font-size: 1.5vw;
+            margin-bottom: 1em;
+        }
+        
+        .scrollable-container {
+            direction: rtl;
+            height: 100vh;
+            overflow-y: auto;
+        }
+        
+        .templates,
+        .components {
+            width: 12.5vw;
+            background-color: white;
+            box-shadow: 0px 0px 5px lightgray;
+            margin: 1em 0px 1em 0px;
+        }
+        
+        .templates {
+            border-radius: 0px 1em 1em 0em;
+            margin-right: 1em;
+        }
+        
+        .components {
+            border-radius: 1em 0px 0px 1em;
+            margin-left: 1em;
+        }
+        
+        .container-circuit{
+            margin-top: 6em;
+            padding: 0 !important;
+        }
+        
+        .circuit-modeling {
+            width: 80vw;
+        }
+        
+        .button-circuit {
+            border-radius: 1em;
+            background-color: #fec226 !important
+        }
+        
+        .button-cancel {
+            background-color: #fec226 !important
+        }
+        
+        .circuit-controls {
+            height: 50px;
+            margin: 1em;
+            padding: 2em;
+            background-color: white;
+            box-shadow: 0px 0px 5px lightgray;
+            border-radius: 1em;
+        }
+        
+        .circuit-workspace {
+            flex-grow: 1;
+            background-color: #f8f9fa;
+            padding: 1em;
+            border-radius: 1em;
+        }
+        
+        .img-component {
+            padding: 0.25em;
+        }
+        
+        .hover-img {
+            direction: ltr;
+            transition: 0.5s;
+        }
+        
+        .hover-img:hover {
+            transform: scale(1.1);
+        }
+        
+        .saving-message {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            font-size: 1em;
+            z-index: 20;
+        }
+        
+        .circuit-graph {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .img-graph {
+            width: 15vw;
+            margin-top: 0.25em;
+            margin-bottom: 0.75em;
+        }
+        
+        .slider-group {
+            flex: 1;
+            margin: 0 1em;
+        }
+
+        .form-range {
+            width: 100%;
+        }
+        
+    </style>
+    <div class="container-fluid d-flex principal container-circuit">
+        <div class="templates scrollable-container p-3">
+            <h5>Templates</h5><img class="img-fluid hover-img mb-2" src="assets/img/circuit1.png" alt="Template 1"><img class="img-fluid hover-img mb-2" src="assets/img/circuit2.png" alt="Template 2"><img class="img-fluid hover-img mb-2" src="assets/img/circuit1.png" alt="Template 1"><img class="img-fluid hover-img mb-2" src="assets/img/circuit2.png" alt="Template 2"><img class="img-fluid hover-img mb-2" src="assets/img/circuit1.png" alt="Template 1"><img class="img-fluid hover-img mb-2" src="assets/img/circuit2.png" alt="Template 2"><img class="img-fluid hover-img mb-2" src="assets/img/circuit1.png" alt="Template 1"><img class="img-fluid hover-img mb-2" src="assets/img/circuit2.png" alt="Template 2"><img class="img-fluid hover-img mb-2" src="assets/img/circuit1.png" alt="Template 1"><img class="img-fluid hover-img mb-2" src="assets/img/circuit2.png" alt="Template 2"><img class="img-fluid hover-img mb-2" src="assets/img/circuit1.png" alt="Template 1"><img class="img-fluid hover-img mb-2" src="assets/img/circuit2.png" alt="Template 2"><img class="img-fluid hover-img mb-2" src="assets/img/circuit1.png" alt="Template 1"><img class="img-fluid hover-img mb-2" src="assets/img/circuit2.png" alt="Template 2"><img class="img-fluid hover-img mb-2" src="assets/img/circuit1.png" alt="Template 1"><img class="img-fluid hover-img mb-2" src="assets/img/circuit2.png" alt="Template 2"><img class="img-fluid hover-img mb-2" src="assets/img/circuit1.png" alt="Template 1"><img class="img-fluid hover-img mb-2" src="assets/img/circuit2.png" alt="Template 2">
         </div>
-    </nav>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8" style="text-align:center;">
-                <div style="height:100%;width:100%;"><img width="302" height="195" src="assets/img/Board.png?h=daf16100bc68b7d117f85695cfe09b3b" style="width:100%;height:100%;"></div>
-            </div>
-            <div class="col-md-4 col-xl-4">
-                <h2 style="text-align:center;">Components</h2>
-                <div class="row">
-                    <div class="col" style="text-align:center;">
-                        <div><img width="100" height="100" src="assets/img/Iconos.png?h=daf16100bc68b7d117f85695cfe09b3b">
-                            <h5 style="text-align:center;margin:0.5em;">Battery</h5>
-                        </div>
-                    </div>
-                    <div class="col" style="text-align:center;">
-                        <div><img width="100" height="100" src="assets/img/Iconos-3.png?h=daf16100bc68b7d117f85695cfe09b3b">
-                            <h5 style="text-align:center;margin:0.5em;">Cable</h5>
-                        </div>
-                    </div>
-                    <div class="col" style="text-align:center;">
-                        <div><img width="99" height="99" src="assets/img/Iconos-2.png?h=daf16100bc68b7d117f85695cfe09b3b">
-                            <h5 style="text-align:center;margin:0.5em;">Resistor</h5>
-                        </div>
-                    </div>
-                    <div class="col" style="text-align:center;">
-                        <div><img width="99" height="101" src="assets/img/Iconos-1.png?h=daf16100bc68b7d117f85695cfe09b3b" style="width:100px;height:100px;">
-                            <h5 style="text-align:center;margin:0.5em;">Capacitor</h5>
-                        </div>
-                    </div>
+        <div class="d-flex flex-column circuit-modeling">
+            <div class="d-flex justify-content-around align-items-center circuit-controls"><button class="btn">Save</button><button class="btn">Save As</button><button class="btn">Load</button><button class="btn">Reset</button><button class="btn">Share</button><button class="btn btn-secondary button-circuit">Run Circuit</button></div>
+            <div class="d-flex justify-content-center align-items-center circuit-workspace"><img class="img-fluid" src="assets/img/CircuitTest2.png" alt="Componente 1"></div>
+            <div class="d-flex flex-column align-items-center mt-3">
+                <div class="circuit-graph"><canvas id="sineCanvas"></canvas></div>
+                <div class="d-flex justify-content-between sliders" style="width:80%;">
+                    <div class="slider-group"><label for="Capacitance">Capacitance</label><input type="range" class="form-range" id="Capacitance" max="100" min="0" value="50"></div>
+                    <div class="slider-group"><label for="Inductance">Inductance</label><input type="range" class="form-range" id="Inductance" max="100" min="0" value="50"></div>
+                    <div class="slider-group"><label for="Resistance">Resistance</label><input type="range" class="form-range" id="Resistance" max="100" min="0" value="50"></div>
                 </div>
             </div>
         </div>
-    </div>
-    <footer>
-        <h2 style="text-align:center;">Or start with a template...</h2>
-        <div class="row" style="width:100vw;text-align:center;">
-            <div class="col-12" style="text-align:center;"><img src="assets/img/circuit1.png?h=daf16100bc68b7d117f85695cfe09b3b" style="width:333px;"><img src="assets/img/circuit2.png?h=daf16100bc68b7d117f85695cfe09b3b" style="width: 333px;height: 219.562px;" width="333" height="16"></div>
+        <div class="components scrollable-container p-3">
+            <h5>Components</h5>
+            <div class="row">
+                <div class="col-12 col-md-6 mb-2"><img class="img-fluid img-component hover-img" src="assets/img/Battery.png" alt="Componente 1"></div>
+                <div class="col-12 col-md-6 mb-2"><img class="img-fluid img-component hover-img" src="assets/img/Cable.png" alt="Componente 2"></div>
+                <div class="col-12 col-md-6 mb-2"><img class="img-fluid img-component hover-img" src="assets/img/Resistor.png" alt="Componente 3"></div>
+                <div class="col-12 col-md-6 mb-2"><img class="img-fluid img-component hover-img" src="assets/img/Capacitor.png" alt="Componente 4"></div>
+                <div class="col-12 col-md-6 mb-2"><img class="img-fluid img-component hover-img" src="assets/img/Dielectric.png" alt="Componente 4"></div>
+                <div class="col-12 col-md-6 mb-2"><img class="img-fluid img-component hover-img" src="assets/img/Lightbulb.png" alt="Componente 4"></div>
+                <div class="col-12 col-md-6 mb-2"><img class="img-fluid img-component hover-img" src="assets/img/Switch.png" alt="Componente 4"></div>
+                <div class="col-12 col-md-6 mb-2"><img class="img-fluid img-component hover-img" src="assets/img/Multimeter.png" alt="Componente 4"></div>
+            </div>
         </div>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/bs-init.js?h=67ee20cf4e5150919853fca3720bbf0d"></script>
+        <nav class="navbar navbar-expand-md fixed-top bg-body shadow-sm py-3">
+            <div class="container"><a class="navbar-brand d-flex align-items-center" href="index.html"><span class="text-primary"><img id="logoFinal" src="assets/img/LogoQuizzLab.png" style="width:45px;height:52px;"><strong>&nbsp; QuizzLab</strong></span></a><button data-bs-toggle="collapse" data-bs-target="#navcol-3" class="navbar-toggler"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navcol-3" style="text-align:center;">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="integrations.html">My Circuits</a></li>
+                        <li class="nav-item"><a class="nav-link" href="untitled.html">Explore</a></li>
+                        <li class="nav-item"><a class="nav-link" href="administrador.html">Users</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="circuitsAdmin.html">Circuits</a></li>
+                    </ul>
+                    <div class="dropdown show" id="dropdownperfil"><a aria-expanded="true" class="dropdown-toggle" data-bs-toggle="dropdown" href="#" style="margin-right:8px;"><i class="fas fa-user"></i></a>
+                        <div class="dropdown-menu dropdown-menu-end show" data-bs-popper="none"><a class="dropdown-item" href="untitled-5.html">My profile</a><a class="dropdown-item" href="#"></a><li class="dropdown-submenu"><a class="dropdown-item" href="#">
+            </a><a class="dropdown-item dropdown-toggle" href="#">Language</a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Sub-Spanish ES</a></li>
+                <li><a class="dropdown-item" href="#">Sub-English EN</a></li>
+            </ul>
+        </li><a class="dropdown-item" href="#"></a><li class="dropdown-submenu"><a class="dropdown-item" href="#">
+            </a><a class="dropdown-item dropdown-toggle" href="#">Themes</a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Dark</a></li>
+                <li><a class="dropdown-item" href="#">Light</a></li>
+            </ul>
+        </li><script>
+        function setTheme(theme) {
+            document.documentElement.setAttribute('data-bs-theme', theme);
+        }
+    </script><a class="link-danger dropdown-item" href="index.html">Log out&nbsp;</a></div>
+                    </div>
+                    <div class="row" style="text-align:center;">
+                        <div class="col"><img class="rounded-circle img-fluid border rounded-0" height="50" src="assets/img/daniel.jpg" style="height:50px;width:48px;" width="45"></div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div><script>
+    const canvas = document.getElementById('sineCanvas');
+    const ctx = canvas.getContext('2d');
+
+    const width = canvas.width;
+    const height = canvas.height;
+    const amplitude = height / 4; // Amplitud de la onda
+    const frequency = 0.05; // Frecuencia de la onda
+    let offset = 0; // Desplazamiento para animación
+
+    function drawSineWave() {
+        ctx.clearRect(0, 0, width, height); // Limpia el canvas
+
+        ctx.beginPath();
+        ctx.moveTo(0, height / 2);
+
+        for (let x = 0; x < width; x++) {
+            const y = height / 2 + amplitude * Math.sin((x * frequency) + offset);
+            ctx.lineTo(x, y);
+        }
+
+        ctx.strokeStyle = '#007bff';
+        ctx.lineWidth = 2;
+        ctx.stroke();
+
+        offset += 0.1; // Incremento para animar el desplazamiento
+        requestAnimationFrame(drawSineWave); // Llama de nuevo para continuar la animación
+    }
+
+    drawSineWave();
+
+    
+    document.addEventListener("DOMContentLoaded", function() {
+        const buttons = document.querySelectorAll(".btn");
+
+        buttons.forEach(button => {
+            button.addEventListener("click", function() {
+                const action = this.innerText;
+                
+                if (action === "Save") {
+                    showSavingMessage();
+                    setTimeout(() => {
+                        showSavedMessage();
+                    }, 1000);
+                } else if (action === "Load") {
+                    triggerFileLoad();
+                } else {
+                    showModal(action);
+                }
+            });
+        });
+
+        function showModal(action) {
+            const modal = document.createElement("div");
+            modal.classList.add("modal", "fade");
+            modal.innerHTML = `
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">${action}</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            ${getModalContent(action)}
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary button-cancel" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Confirm ${action}</button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            document.body.appendChild(modal);
+            const bootstrapModal = new bootstrap.Modal(modal);
+            bootstrapModal.show();
+
+            modal.addEventListener("hidden.bs.modal", () => {
+                modal.remove();
+            });
+        }
+
+        function getModalContent(action) {
+            switch (action) {
+                case "Save As":
+                    return `
+                        <label for="saveAsName">Enter a name for the circuit:</label>
+                        <input type="text" id="saveAsName" class="form-control" placeholder="Circuit name">
+                    `;
+                case "Reset":
+                    return "<p>Are you sure you want to reset this circuit?</p>";
+                case "Share":
+                    return `
+                        <label for="shareLink">Generate a shareable link:</label>
+                        <input type="text" id="shareLink" class="form-control" value="https://quizzlab.com/01b6dfad61dfe741d5f242baa417af6b" readonly>
+                        <small>Copy and share this link to allow others to view this circuit.</small>
+                    `;
+                default:
+                    return "<p>No additional content for this action.</p>";
+            }
+        }
+
+        function showSavingMessage() {
+            const message = document.createElement("div");
+            message.id = "saveMessage";
+            message.classList.add("saving-message");
+            message.innerText = "Saving...";
+            document.body.appendChild(message);
+        }
+
+        function showSavedMessage() {
+            const message = document.getElementById("saveMessage");
+            if (message) {
+                message.innerText = "Saved successfully!";
+                setTimeout(() => {
+                    message.remove();
+                }, 1500);
+            }
+        }
+
+        function triggerFileLoad() {
+            const fileInput = document.createElement("input");
+            fileInput.type = "file";
+            fileInput.accept = ".json, .circuit";
+            fileInput.style.display = "none";
+            document.body.appendChild(fileInput);
+
+            fileInput.click();
+
+            fileInput.addEventListener("change", function(event) {
+                const file = event.target.files[0];
+                if (file) {
+                    console.log("Archivo cargado:", file.name);
+                }
+                fileInput.remove();
+            });
+        }
+    });
+</script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
-    <script src="assets/js/Profile-Edit-Form-profile.js?h=36f16d72db7b5e137e5f6f74a6f95a32"></script>
-    <script src="assets/js/startup-modern.js?h=860a1ecddc64fd24c02f2fc109343dbd"></script>
+    <script src="assets/js/Profile-Edit-Form-profile.js"></script>
+    <script src="assets/js/startup-modern.js"></script>
+    <script src="assets/js/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/js/bs-init.js"></script>
 </body>
 
 </html>
